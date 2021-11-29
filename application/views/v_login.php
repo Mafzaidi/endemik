@@ -32,15 +32,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<h2 class="text-center">LOGIN</h2>
 
 					<div class="form-group">
-						<label for="email">Email address</label>
+						<label for="email">Username</label>
 						<div class="input-group mb-3">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroup-sizing-default" data-symbol="&#xf206;"></span>
 							</div>
-							<input type="email" class="form-control" id="email" name="email" placeholder="Type your email" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
-							<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>  -->
+							<input type="text" class="form-control" id="username" name="username" placeholder="Type your username" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" required>
 							<div class="invalid-feedback">
-								Your email is required
+								Your username is required
 							</div>
 						</div>
 					</div>

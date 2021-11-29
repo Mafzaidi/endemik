@@ -16,20 +16,21 @@ class Login extends CI_Controller
 
 	function user_login()
 	{
-		$email = $this->input->post('email');
+		$username = $this->input->post('username');
 		$password = md5($this->input->post('password'));
 		$where = array(
-			'email' => $email,
+			'username' => $username,
 			'password' => $password
 		);
 
-		if ($email <> '' && $password <> '') {
+		if ($username <> '' && $password <> '') {
 			$check = $this->mu->cek_login('ms_user_m', $where)->num_rows();
 			if ($check > 0) {
-				$login = $this->mu->loginUser($email, $password);
+				$login = $this->mu->loginUser($username, $password);
 
 				$data_session = array(
 					'user_id' => $login->user_id,
+					'username' => $login->username,
 					'email' => $login->email,
 					'first_name' => $login->first_name,
 					'last_name' => $login->last_name,
