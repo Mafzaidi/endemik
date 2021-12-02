@@ -14,7 +14,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <a href="#" class="navbar-brand fa fa-l">ogbook</a>
+        <a href="#" class="navbar-brand fa fa-e">ndemik</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
