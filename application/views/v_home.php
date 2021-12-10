@@ -6,7 +6,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Welcome to CodeIgniter</title>
+    <title><?= $tittle; ?></title>
     <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap-4.6.1/dist/css/bootstrap.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/home.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/main.css'); ?>">
@@ -24,16 +24,38 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <a href="#" class="d-flex sidebar-brand align-items-center justify-content-center fa fa-e"><span>ndemik</span></a>
                 <hr class="sidebar-divider my-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Form</a>
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="fas fa-align-justify"></i>
+                        <span>Form</span>
+                    </a>
+                    <div id="collapseTwo" class="collapse bg-light">
+                        <ul class="nav flex-column">
+                            <li class="nav-item p-2">
+                                <a class="text-decoration-none" href="#"><i class="fas fa-file-alt"></i><span>Peminjaman Medrec</span></a>
+                            </li>
+                            <li class="nav-item p-2">
+                                <a class="text-decoration-none" href="#"><i class="fas fa-file-alt"></i><span>Pemakaian Alat</span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Link</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Link</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Link</span>
+                    </a>
                 </li>
             </ul>
         </div>
