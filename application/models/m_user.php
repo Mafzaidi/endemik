@@ -15,7 +15,7 @@ class M_user extends CI_Model
 									A.LAST_NAME, 
 									A.IS_ADMIN
 								 FROM
-									LOGBOOK.MS_USER_M A
+                                    ENDEMIK.MS_USER_M A
 								 WHERE
 									A.USER_ID = '" . $userID . "'");
 
@@ -23,17 +23,19 @@ class M_user extends CI_Model
         return $row;
     }
 
-    function loginUser($email, $password)
+    function loginUser($username, $password)
     {
         $query = $this->db->query("SELECT
 									A.USER_ID, 
 									A.FIRST_NAME, 
-									A.LAST_NAME, 
-									A.IS_ADMIN
+									A.LAST_NAME,
+                                    A.SHOW_FLAG, 
+									A.ADMIN_FLAG
 								 FROM
-                                    LOGBOOK.MS_USER_M A
+                                    ENDEMIK.MS_USER_M A
 								 WHERE
-									A.EMAIL = '" . $email . "'
+									(A.EMAIL = '" . $username . "'
+                                    OR UPPER(A.USERNAME) = UPPER('" . $username . "'))
 									AND A.PASSWORD = '" . $password . "'");
 
         $row = $query->row();
