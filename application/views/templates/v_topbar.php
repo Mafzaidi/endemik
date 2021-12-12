@@ -12,7 +12,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="#" class="nav-link">Products</a>
+                <a href="#" class="nav-link"><?= $this->session->userdata('user_id'); ?></a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">Users</a>
